@@ -2,8 +2,6 @@ src_folder: src
 dist_folder: dist
 styles:
   - src/styles/index.styl
-  - src/styles/oldie.styl
-  - src/styles/print.styl
 scripts:
   - src/scripts/index.es6
 images:
@@ -27,6 +25,7 @@ dependencies:
   - jquery
 data:
   global: src/data/global.json
+  questions: src/data/questions.json
 hooks:
   init: mango install
 version: ">=0.27"

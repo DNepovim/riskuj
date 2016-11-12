@@ -12,3 +12,8 @@ npm-debug.log
 mango.local.yaml
 
 .idea
+
+src/data/questions.json
+src/data/global.json
+
+
