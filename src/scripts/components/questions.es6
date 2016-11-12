@@ -1,4 +1,5 @@
 var Component = require('./component')
+var $ = window.jQuery
 
 /**
  * Example component class
@@ -8,21 +9,19 @@ var Component = require('./component')
  * - DOM event listeners are in Backbone style
  *
  */
-module.exports = class Example extends Component {
+module.exports = class Questions extends Component {
 
 	constructor(el, data) {
 		super(el, data)
-	}
 
-	get listeners() {
-		return {
-			'click .example-child': 'handleClick'
-		}
+		$('.table-item').on('click', function (e) {
+			e.preventDefault()
+			if ($(this).hasClass('disable')) {
+				$(this).removeClass('disable')
+			} else {
+				$(this).addClass('disable')
+				$(this).find('.table-question').toggleClass('show')
+			}
+		})
 	}
-
-	handleClick(e, self) {
-		e.preventDefault()
-		alert(self.data)
-	}
-
 }

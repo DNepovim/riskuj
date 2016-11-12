@@ -5,7 +5,7 @@ var componentsHandler = require('./componentsHandler')
 var onJQueryAvailable = ($) => {
 	require('./plugins')
 	componentsHandler({
-		'example': require('./components/example'),
+		'questions': require('./components/questions'),
 		'shapes': require('./components/shapes')
 	})
 }
