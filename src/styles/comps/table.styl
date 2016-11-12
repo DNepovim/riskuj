@@ -12,6 +12,9 @@
 		padding 0.5em
 		transition color 300ms, background 300ms
 
+		p
+			margin 0
+
 		&:first-of-type
 			text-align left
 			font-weight 500
@@ -28,14 +31,14 @@
 			color alpha($c-main, 0.2)
 
 	&-question
-		position relative
 		display none
 		position absolute
-		top 40px
+		top 50%
 		left 10vw
 		z-index 10
+		transform translateY(-50%)
 		width 80vw
-		height 500px
+		height 80vh
 		border-radius $radius
 		color $c-blank
 		font-weight 300
