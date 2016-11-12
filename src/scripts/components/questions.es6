@@ -32,19 +32,23 @@ module.exports = class Questions extends Component {
 
 		$('.table-button').on('click', function (e) {
 			e.preventDefault()
+			var value = parseInt($(this).closest('.table-item').find('.value').text())
+
 			if ($(this).hasClass('one')) {
-				var value = parseInt($(this).closest('.table-item').find('.value').text())
+
 				$('#one').attr('value', parseInt($('#one').attr('value')) + value);
-				$('.table-question').removeClass('show')
+
 			} else if ($(this).hasClass('two')) {
-				var value = parseInt($(this).closest('.table-item').find('.value').text())
-				$('#two').attr('value', parseInt($('#one').attr('value')) + value);
-				$('.table-question').removeClass('show')
+
+				$('#two').attr('value', parseInt($('#two').attr('value')) + value);
+
 			} else if ($(this).hasClass('three')) {
-				var value = parseInt($(this).closest('.table-item').find('.value').text())
-				$('#three').attr('value', parseInt($('#one').attr('value')) + value);
-				$('.table-question').removeClass('show')
+
+				$('#three').attr('value', parseInt($('#three').attr('value')) + value);
+
 			}
+
+			$('.table-question').removeClass('show')
 		})
 	}
 }
