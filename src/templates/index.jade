@@ -1,18 +1,21 @@
 extends layouts/default
 
-append vars
-	- var page = 'index'
-	- var description = 'Sample project structure used in manGoweb'
-
 block content
 
 	main.layout(role='main')
+		table.table
+			each topic,name in questions
+				tr
+					- var i = 0
+					each question in topic
+						td.table-item
+							if i == 0
+								= name
+							else
+								= i
+							- i += 100
+							span.table-question=question
 
-		h1= global.title
-
-		include parts/example
-
-		include parts/samplecontent
 
 
 
