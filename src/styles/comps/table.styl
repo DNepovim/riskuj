@@ -1,6 +1,5 @@
 .table
-	width 90vw
-	margin 50px 5vw
+	width 100%
 
 	&-item
 		cursor pointer
@@ -19,11 +18,17 @@
 			background $c-main
 			color $c-blank
 
+			.value
+				display none
+
+			&.disable
+				background $c-gray
+
 		&.disable
 			color alpha($c-main, 0.2)
 
 	&-question
-		cursor pointer
+		position relative
 		display none
 		position absolute
 		top 40px
@@ -37,6 +42,30 @@
 		background $c-main
 		justify-content center
 		align-items center
+
+		&-text
+			font-size 1.2rem
+
+		&-buttons
+			position absolute
+			display flex
+			bottom 0
+			left 0
+			width 100%
+
+			.button
+				cursor pointer
+				flex 1
+				height 30px
+
+				&.one
+					background $c-blue
+
+				&.two
+					background $c-yellow
+
+				&.three
+					background $c-green
 
 		&.show
 			display flex

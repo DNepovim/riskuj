@@ -3,6 +3,8 @@ extends layouts/default
 block content
 
 	main.layout(role='main')
+
+
 		table.table
 			each topic,name in questions
 				tr
@@ -10,12 +12,29 @@ block content
 					each question in topic
 						td.table-item
 							if i == 0
-								= name
+								p.name=name
+								p.value=300
 							else
-								= i
+								p.value=i
 							- i += 100
-							span.table-question=question
+							.table-question
+								.table-question-text=question
+								.table-question-buttons
+									.table-button.button.one
+									.table-button.button.two
+									.table-button.button.three
 
+		.team-container
 
+			.team.team-one
+				input.team-name(type=text, value='tým jedna')
+				input#one.team-scorebox(type=text, name=one, value=100)
 
+			.team.team-two
+				input.team-name(type=text, value='tým dvě')
+				input#two.team-scorebox(type=text, name=one, value=100)
+
+			.team.team-three
+				input.team-name(type=text, value='tým jedna')
+				input#three.team-scorebox(type=text, name=one, value=100)
 
