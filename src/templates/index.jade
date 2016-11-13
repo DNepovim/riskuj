@@ -4,6 +4,7 @@ block content
 
 	main.layout(role='main')
 
+		h1.title='Riskuj'
 
 		table.table
 			each topic,name in questions
@@ -28,13 +29,13 @@ block content
 
 			.team.team-one
 				input.team-name(type=text, value='tým jedna')
-				input#one.team-scorebox(type=text, name=one, value=100)
+				input#one.team-scorebox(type=text, name=one, value=0)
 
 			.team.team-two
 				input.team-name(type=text, value='tým dvě')
-				input#two.team-scorebox(type=text, name=one, value=100)
+				input#two.team-scorebox(type=text, name=one, value=0)
 
 			.team.team-three
 				input.team-name(type=text, value='tým tři')
-				input#three.team-scorebox(type=text, name=one, value=100)
+				input#three.team-scorebox(type=text, name=one, value=0)
 
